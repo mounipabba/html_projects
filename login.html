@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+    <body>
+        <div style="display:flex; margin:10px">
+            <label>Name:</label>
+            <input type="text" id="name">
+            <p id="stdname"></p>
+        </div>
+        <div style="display:flex; margin:10px">
+            <label>Age:</label>
+            <input type="number" id="age">
+            <p id="stdage"></p>
+        </div>
+        <div style="display:flex; margin:10px">
+            <label>Email:</label>
+            <input type="email" id="email">
+            <p id="stdemail"></p>
+        </div>
+        <button onclick="savebutton()">Save</button>
+        <button onclick="editbutton()">Edit</button>
+        <script>
+            let nameEle=document.getElementById("name");
+            let ageEle=document.getElementById("age");
+            let emailEle=document.getElementById("email");
+            let stdnameEle=document.getElementById("stdname");
+            let stdageEle=document.getElementById("stdage");
+            let stdemailEle=document.getElementById("stdemail");
+            function savebutton(){
+                stdnameEle.textContent=nameEle.value;
+                stdageEle.textContent=ageEle.value;
+                stdemailEle.textContent=emailEle.value;
+                nameEle.style.display="none";
+                ageEle.style.display="none";
+                emailEle.style.display="none";
+            }
+            function editbutton(){
+                nameEle.style.display="block";
+                ageEle.style.display="block";
+                emailEle.style.display="block";
+                stdnameEle.style.display="none";
+                stdageEle.style.display="none";
+                stdemailEle.style.display="none";
+            }
+        </script>
+    </body>
+</html>
