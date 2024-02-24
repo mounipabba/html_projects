@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Dancing Robot</title>
+        <style>
+            body{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            @keyframes dance {
+                0%{
+                    transform:rotate(20deg);
+                }
+                50%{
+                    transform: rotate(180deg);
+                }
+            }
+            .head{
+                height:120px;
+                width:200px;
+                background-color:red;
+                border-top-left-radius: 35px;
+                border-top-right-radius: 35px;
+            }
+            .merge{
+                display:flex;
+                flex-direction: row;
+            }
+            .left-hand{
+                height:180px;
+                width:50px;
+                background-color: red;
+                border-radius:10px;
+                margin:10px;
+                transition:transform 6ms;
+                animation-name:dance;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+            .body{
+                height:200px;
+                width:200px;
+                background-color: red;
+                border-radius: 20px;
+                margin-left:20px;
+                margin-top:20px;
+                margin-right:20px;
+            }
+            .right-hand{
+                height:180px;
+                width:50px;
+                background-color: red;
+                border-radius:10px;
+                margin:10px;
+                transition:transform 6ms;
+                animation-name:dance;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+            .left-leg{
+                height:90px;
+                width:50px;
+                background-color:red;
+                margin:10px;
+                border-radius:10px;
+                transition:transform 6ms;
+                animation-name:dance;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+            .right-leg{
+                height:90px;
+                width:50px;
+                background-color:red;
+                margin:10px;
+                border-radius:10px;
+                transition:transform 6ms;
+                animation-name:dance;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+        </style>
+    </head>
+    <body>
+            <div class="head"></div>
+            <div class="merge">
+                <div class="left-hand"></div>
+                <div class="body"></div>
+                <div class="right-hand"></div>
+            </div>
+            <div class="merge">
+                <div class="left-leg"></div>
+                <div class="right-leg"></div>
+            </div>   
+    </body>
+</html>
